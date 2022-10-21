@@ -11,7 +11,7 @@
 #5-Fizalizar Atendimento
 #Função Check-In:
 #Crie uma lista para o cadastro de pessoas: nome, sobrenome e idade.
-from controller import cadastro
+from controller import *
 
 #FUNÇÃO HORÁRIO SAUDAÇÃO
 from doctest import OutputChecker
@@ -38,6 +38,7 @@ else:
     else:
         print("Boa noite! Seja bem-vindo!")
 
+#FUNÇÃO MENU
 print('''
         Como podemos ajudar?
 
@@ -48,7 +49,6 @@ print('''
         [E] - Finalizar Atendimento
     ''')
 
-#FUNÇÃO MENU
 poli = "="*20
 cabecalho = print(f'\n{poli} Hotel Ponei Saltitante {poli}\n')
 
@@ -66,3 +66,10 @@ if escolha == "A":
     cliente["sobrenome"] = input(("Digite seu sobrenome: "))
     cliente["idade"] = input(("Digite sua idade: "))
     cadastro(cliente)
+    
+if escolha == "B":
+    print(listar())
+    
+if escolha == "C":
+    clienteFind=str(input("Digite o nome desejado: "))
+    procurarHospedes(clienteFind)
