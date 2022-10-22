@@ -71,5 +71,7 @@ if escolha == "B":
     print(listar())
     
 if escolha == "C":
-    clienteFind=str(input("Digite o nome desejado: "))
-    procurarHospedes(clienteFind)
+    clienteFind()
+    
+if escolha == "D":
+    fazerCheckout(clienteFind)
