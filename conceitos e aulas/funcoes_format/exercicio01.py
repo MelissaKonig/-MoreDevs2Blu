@@ -3,6 +3,7 @@
 #Funções têm parenteses
 #Variaveis têm letras minusculas
 
+
 # variável representando soma
 soma = 5 + 2
 
