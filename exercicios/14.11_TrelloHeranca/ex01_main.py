@@ -1,0 +1,3 @@
+from ex01_pessoaFisica import PessoaFisica
+from ex01_pessoaJuridica import PessoaJuridica
+
