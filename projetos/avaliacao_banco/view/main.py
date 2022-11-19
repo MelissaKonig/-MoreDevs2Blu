@@ -34,14 +34,14 @@ def menu():
                 [2] Listar Pessoas Físicas Cadastradas
                 ''')
                 
-                opcaoPessoaFisica = int(input('Digite a opção desejada: '))
-                match opcaoPessoaFisica:
+                menu = int(input('Digite a opção desejada: '))
+                match menu:
                     # Crie um case 1: opção de escolha para Criar conta pessoaFísica
                     case 1:
-                        conta = PessoaFisica() # Dentro do case 1: crie uma variável de referência ao objeto de PessoaFisica()
-                        conta.titular = 'Haiko Triste'
-                        conta.cpf = '07561592965'
-                        conta.saldo_inicial = '52647'
+                        pessoaFIsica = PessoaFisica() # Dentro do case 1: crie uma variável de referência ao objeto de PessoaFisica()
+                        pessoaFIsica.titular = 'Haiko Triste'
+                        pessoaFIsica.cpf = '07561592965'
+                        pessoaFIsica.saldo_inicial = '52647'
                     
                         print('''
                         Gostaria de cadastrar um segundo titular?
@@ -53,18 +53,15 @@ def menu():
                         
                         # Crie um if condicional solicitando se deseja cadastrar um segundo_titular.
                         if resposta == 1:
-                            conta.segundo_titular = 'Não Possui'
-                        elif resposta == 2:
-                            conta.segundo_titular = ''
+                            pessoaFIsica.segundo_titular = input('Digite o segundo titular:> ')
+                        
                         
                         #Chame a função create_psf() e passe a variável de objeto
-                        create_psf(conta)
+                        create_psf(pessoaFIsica)
                         
                     #Crie um case 2: opção de escolha para listar contas pessoaFísica  
                     case 2:
-                        listar_psf = read_psf()
-                        for c in listar_psf:
-                            print(c)
+                        read_psf()
                         
             # Crie um case 2: opção de escolha para pessoajuridica
             case 2:
@@ -77,8 +74,8 @@ def menu():
                 [2] Listar Pessoas Jurídica Cadastradas
                 ''')
                 
-                opcaoPessoaJuridica = int(input('Digite a opção desejada: '))
-                match opcaoPessoaJuridica:
+                menu = int(input('Digite a opção desejada: '))
+                match menu:
                     #Crie um case 1: opção de escolha para Criar conta pessoaJuridica
                     case 1:
                         #Dentro do case 1: crie uma variável de referência ao objeto de PessoaJuridica()
@@ -98,8 +95,6 @@ def menu():
                         #Crie um if condicional solicitando se deseja cadastrar um segundo_titular.
                         if resposta == 1:
                             conta.segundo_titular = 'Não Possui'
-                        elif resposta == 2:
-                            conta.segundo_titular = ''
                             
                         #Chame a função create_pj() e passe a variável de objeto
                         create_pj(conta)

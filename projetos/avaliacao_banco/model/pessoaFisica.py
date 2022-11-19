@@ -4,7 +4,7 @@ from model.conta import Conta
 class PessoaFisica(Conta):
     __segundo_titular = ''
     __titular = ''
-    __cpf = 0
+    __cpf = ''
     __saldo_inicial = 0
     
     #Crie anotações de @property e @setter para cada atributo privado da nossa classe.

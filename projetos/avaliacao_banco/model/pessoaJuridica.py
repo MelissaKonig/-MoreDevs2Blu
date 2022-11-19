@@ -4,7 +4,7 @@ from model.conta import Conta
 class PessoaJuridica(Conta):
     __segundo_titular = ''
     __titular = ''
-    __cnpj = 0
+    __cnpj = ''
     __saldo_inicial = 0
     
     #Crie anotações de @property e @setter para cada atributo privado da nossa classe.
@@ -37,5 +37,5 @@ class PessoaJuridica(Conta):
         self.__saldo_inicial = __saldo_inicial
         
     #Chame o método __str__ e retorne o método super().__str__() e acessando os atributos através das anotações de @property e @setter de titular, cnpj e saldo_inicial e segundo_titular,  coloque ( ; ) na divisão entre  os atributos.
-    def __str__(self) -> str:
-        return f'{super().__str__()} ; {self.__segundo_titular} ; {self.__titular} ; {self.__cnpj} ; {self.__saldo_inicial}'
+    def __str__(self):
+        return f'{super().__str__()}; {self.__segundo_titular}; {self.__titular}; {self.__cnpj}; {self.__saldo_inicial}'

@@ -6,10 +6,12 @@ def create_pj(conta):
     contas.write(str(conta)+'\n') #Chame essa variável, chamando a função interna do python que escreve .write()
     contas.close() #Escreva a função  interna contas.close() para fechar o arquivo
     
+    
 #Crie a função read_pj()  dentro do bloco da função crie uma variável lista_contas recebendo uma lista vazia.
-def read_pj(conta):
+def read_pj():
     lista_contas = []
     contas = open('pessoajuridica.txt', 'r') #Crie uma segunda variável contas abrindo nosso arquivo txt
+    
     
     for conta in contas:
         conta__objeto = conta.split(';')

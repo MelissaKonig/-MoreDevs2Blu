@@ -14,11 +14,9 @@ def read_psf():
     
     #Crie um for com uma variável conta percorrendo a variável contas do arquivo pessoafisica.txt
     for conta in contas:
-        conta__objeto = conta.split(';') #Crie uma variável conta_objeto recebendo a variável conta e utilize a função interna do python que identifica um índice na lista .split()
         conta = conta.strip() #Faça novamente a variável do for conta e atribua a função interna do python Que retira os espaços .strip()
-
+        conta__objeto = conta.split(';')#Crie uma variável conta_objeto recebendo a variável conta e utilize a função interna do python que identifica um índice na lista .split()
         print(conta__objeto)
-        
         #Crie um objeto de pessoaFisica e chame cada atributo da nossa classe, inclusive os dados da classe base (Conta) agencia, numero_agencia, titular, cpf e saldo_incial.
         conta = PessoaFisica()
         conta.agencia = conta__objeto[0] #E insira para cada atributo um índice da lista conforme a sequência de criação
